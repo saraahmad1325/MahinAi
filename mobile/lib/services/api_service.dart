@@ -11,7 +11,7 @@ class ApiService {
       Uri.parse('$baseUrl$path'),
       headers: {
         'Content-Type': 'application/json',
-        if (token != null) 'Authorization': 'Bearer ' + token,
+        if (token != null) 'Authorization': '${'Bearer'} $token',
       },
       body: jsonEncode(body),
     );
@@ -27,7 +27,7 @@ class ApiService {
     final response = await http.get(
       Uri.parse('$baseUrl$path'),
       headers: {
-        if (token != null) 'Authorization': 'Bearer ' + token,
+        if (token != null) 'Authorization': '${'Bearer'} $token',
       },
     );
 

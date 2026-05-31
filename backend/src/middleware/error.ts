@@ -6,8 +6,7 @@ export const notFound = (_req: Request, res: Response): void => {
   res.status(404).json({ message: 'Not found' });
 };
 
-export const errorHandler = (err: unknown, _req: Request, res: Response, next: NextFunction): void => {
-  void next;
+export const errorHandler = (err: unknown, _req: Request, res: Response, _next: NextFunction): void => {
   if (err instanceof ZodError) {
     res.status(400).json({ message: 'Validation failed', issues: err.issues });
     return;

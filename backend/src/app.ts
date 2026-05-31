@@ -1,4 +1,3 @@
-import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import express from 'express';
 import helmet from 'helmet';
@@ -26,7 +25,6 @@ app.use(
 );
 app.use(rateLimit({ windowMs: 60_000, limit: 60 }));
 app.use(express.json({ limit: '1mb' }));
-app.use(cookieParser());
 app.use(pinoHttp({ logger }));
 
 app.get('/health', (_req, res) => {

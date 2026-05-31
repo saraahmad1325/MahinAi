@@ -20,7 +20,7 @@
     "url": "https://github.com/saraahmad1325/MahinAi/issues"
   },
   "homepage": "https://github.com/saraahmad1325/MahinAi#readme",
-  "private": "true",
+  "private": true,
   "workspaces": [
     "backend",
     "web"
